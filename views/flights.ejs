@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Details</title>
+    <style>
+        * {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            box-sizing: border-box; 
+        }
+        body {
+            background-color: #f4f4f4; 
+            padding: 15px; 
+        }
+        .flight-row {
+            display: flex; 
+            justify-content: space-between; 
+            margin-bottom: 20px; 
+        }
+        .flightdet {
+            flex: 1;
+            border: 1px solid #ccc; 
+            border-radius: 10px; 
+            padding: 20px; 
+            margin: 0 10px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+            background-color: white; 
+        }
+        h1 {
+            margin: 0; 
+            font-size: 2em; 
+            color: #2E8B57; 
+            margin-bottom: 10px; 
+        }
+        h2 {
+            margin: 0; 
+            font-size: 1.8em; 
+            color: #333; 
+            margin-top: 5px; 
+        }
+        p {
+            margin-top: 10px; 
+            color: #555; 
+        }
+        button {
+            background-color: green; 
+            color: white; 
+            padding: 15px 30px; 
+            text-align: center; 
+            text-decoration: none; 
+            display: inline-block; 
+            font-size: 16px; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .sort-container {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sort-container">
+        <label for="sort">Sort by Price:</label>
+        <select id="sort" onchange="sortFlights()">
+            <option value="asc">Lowest to Highest</option>
+            <option value="desc">Highest to Lowest</option>
+        </select>
+    </div>
+
+    <div id="flights">
+        <% for(let i = 0; i < data.length; i += 2) { %>
+            <div class="flight-row">
+                <div class="flightdet">
+                    <h1>From <%= data[i].from %> to <%= data[i].to %></h1>
+                    <h2 id="name"><%= data[i].planeName %></h2>
+                    <p id="price">Price: <%= data[i].price %> Rupees</p>
+                    <p id="time">Duration: <%= data[i].duration %></p>
+                    <button>Book</button>
+                </div>
+                <% if (i + 1 < data.length) { %>
+                <div class="flightdet">
+                    <h1>From <%= data[i + 1].from %> to <%= data[i + 1].to %></h1>
+                    <h2 id="name"><%= data[i + 1].planeName %></h2>
+                    <p id="price">Price: <%= data[i + 1].price %> Rupees</p>
+                    <p id="time">Duration: <%= data[i + 1].duration %></p>
+                    <button>Book</button>
+                </div>
+                <% } %>
+            </div>
+        <% } %>
+    </div>
+
+    <script>
+        function sortFlights() {
+            const select = document.getElementById('sort');
+            const order = select.value;
+            const flightsContainer = document.getElementById('flights');
+            let flights = Array.from(flightsContainer.children);
+            
+            flights.sort((a, b) => {
+                const priceA = parseInt(a.querySelector('#price').innerText.replace('Price: ', '').replace(' Rupees', ''));
+                const priceB = parseInt(b.querySelector('#price').innerText.replace('Price: ', '').replace(' Rupees', ''));
+                return order === 'asc' ? priceA - priceB : priceB - priceA; 
+            });
+
+            
+            flightsContainer.innerHTML = '';
+            flights.forEach(flight => flightsContainer.appendChild(flight));
+        }
+    </script>
+</body>
+</html>
