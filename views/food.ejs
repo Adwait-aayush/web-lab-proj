@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Top 10 Places to Visit in Pakistan</title>
+    <title>Foods</title>
     <style>
         body {
             font-family: 'Arial', sans-serif; 
@@ -51,7 +51,7 @@
             border-radius: 8px; 
         }
 
-        .random-place {
+        .random-food {
             height:60vh;
             margin: 20px auto;
             width: 60%;
@@ -68,31 +68,30 @@
 </head>
 
 <body>
-    <h1>Top 10 Places to Visit in Pakistan</h1>
+    <h1>Popular Food Items</h1>
     
-    <% for (let p of places) { %>
+    <% for (let f of food) { %>
         <div class="container">
             <div class="info">
-                <h1 id="header"><%= p.name %></h1>
-                <p><%= p.description %></p> 
+                <h2 id="header"><%= f.name %></h2>
+                <p><%= f.description %></p> 
             </div>
             <div class="img">
-                <img src="<%= p.imgSrc %>" alt="<%= p.name %> image"> 
+                <img src="<%= f.imgSrc %>" alt="<%= f.name %> image"> 
             </div>
         </div>
     <% } %>
 
     <% 
-        
-        const randomIndex = Math.floor(Math.random() * places.length);
-        const randomPlace = places[randomIndex]; 
+        const randomIndex = Math.floor(Math.random() * food.length);
+        const randomPlace = food[randomIndex]; 
     %>
     
-    <div class="random-place">
-        <h1>Random Place to Visit</h1>
+    <div class="random-food">
+        <h1>Random Food Item</h1>
         <h2><%= randomPlace.name %></h2>
         <p><%= randomPlace.description %></p>
-        <img  id="rimg" src="<%= randomPlace.imgSrc %>" alt="<%= randomPlace.name %> image" style="width: 100%; height: auto; border-radius: 8px;">
+        <img id="rimg"src="<%= randomPlace.imgSrc %>" alt="<%= randomPlace.name %> image" style="width: 100%; height: auto; border-radius: 8px;">
     </div>
 </body>
 

@@ -1,0 +1,48 @@
+[
+    {
+        "name": "Biryani",
+        "description": "Biryani is a fragrant rice dish made with basmati rice, marinated meat (chicken, beef, or mutton), and a blend of spices. This dish is often garnished with fried onions and served with raita (yogurt sauce). Biryani is a beloved staple in Pakistani cuisine, known for its rich flavors and aromatic spices.",
+        "imgSrc": "/biriyani.jpg"
+    },
+    {
+        "name": "Karahi",
+        "description": "Karahi is a traditional Pakistani curry cooked in a wok-like vessel called a 'karahi.' It typically consists of meat (chicken, beef, or mutton) cooked with tomatoes, green chilies, and spices. This dish is known for its bold flavors and is often enjoyed with naan or rice.",
+        "imgSrc": "/karhai.jpeg"
+    },
+    {
+        "name": "Nihari",
+        "description": "Nihari is a slow-cooked stew made with meat, typically beef or lamb, and a blend of spices. This dish is traditionally eaten for breakfast and is known for its rich, flavorful gravy. It is served with naan and often garnished with fresh coriander and ginger.",
+        "imgSrc": "/nihari.jpeg"
+    },
+    {
+        "name": "Chapli Kebab",
+        "description": "Chapli Kebab is a spiced ground meat patty, typically made with minced beef or lamb, mixed with herbs and spices. Originating from the Khyber Pakhtunkhwa province, these kebabs are shallow-fried until crispy and are often served with naan, yogurt, and salad.",
+        "imgSrc": "/chapli.jpeg"
+    },
+    {
+        "name": "Samosas",
+        "description": "Samosas are popular fried or baked pastries filled with spiced potatoes, peas, or meat. They are a favorite snack in Pakistan, often served with chutney. Crispy on the outside and flavorful on the inside, samosas are perfect for any occasion.",
+        "imgSrc": "/samosa.jpeg"
+    },
+    {
+        "name": "Haleem",
+        "description": "Haleem is a thick, savory porridge made from wheat, barley, lentils, and meat. This dish is slow-cooked for several hours and is often garnished with fried onions, lemon, and fresh herbs. Haleem is especially popular during Ramadan and at special occasions.",
+        "imgSrc": "/haleem.jpeg"
+    },
+    {
+        "name": "Pakoras",
+        "description": "Pakoras are deep-fried fritters made from a batter of chickpea flour and a variety of vegetables or meats. These crispy snacks are often served with chutney and are popular during the rainy season in Pakistan.",
+        "imgSrc": "/pakora.jpeg"
+    },
+  
+    {
+        "name": "Kheer",
+        "description": "Kheer is a traditional rice pudding made from rice, milk, sugar, and flavored with cardamom and nuts. This sweet dessert is often served at festivals and special occasions, bringing a delightful end to any meal.",
+        "imgSrc": "/kheer.jpeg"
+    },
+    {
+        "name": "Lassi",
+        "description": "Lassi is a refreshing yogurt-based drink, often flavored with fruit or spices. It can be served sweet or salty and is a popular beverage in Pakistan, especially during the hot summer months. Lassi pairs well with spicy meals.",
+        "imgSrc": "/lassi.jpeg"
+    }
+]

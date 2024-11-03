@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const data=require('./mockdata.json')
 const places=require('./mockdata2.json')
+const food=require('./mockdata3.json')
 
 
 app.use(express.static('public'));
@@ -17,7 +18,7 @@ app.get('/home/places',(req,res)=>{
     res.render('places',{places})
 })
 app.get('/home/food',(req,res)=>{
-    res.render('food',{})
+    res.render('food',{food})
 })
 
 app.listen(3000, () => {
